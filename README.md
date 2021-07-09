@@ -2,15 +2,6 @@
 
 # Installation (Suppose using MacOS)
 ---
-## tmux
-
-```zsh
-# Tmux version >=  2.1 
-cd dotfile
-# The default prefix is Ctrl+A
-ln -s -f $PWD/tmux.conf ~/.tmux.conf
-```
-
 ## fonts
 ``` zsh
 # ref https://github.com/powerline/fonts.git
@@ -62,4 +53,16 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 vim ~/.zshrc
 # ... represent other Zsh plugins you may have installed.
 plugin=(... zsh-autosuggestions zsh-syntax-highlighting)
+```
+
+## tmux & fzf & custom options
+```zsh
+# Tmux version >=  2.1 
+cd dotfile
+# The default prefix is Ctrl+A
+ln -s -f $PWD/tmux.conf ~/.tmux.conf
+# Add some custom function ex: Ctrl+P
+ln -s -f $PWD/custom.zsh ~/.custom.zsh
+# Add this to ~/.zshrc
+source ~/.custom.zsh
 ```
