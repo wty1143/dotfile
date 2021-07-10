@@ -1,7 +1,7 @@
 # Manual setting
 # ref: https://adamheins.com/blog/ctrl-p-in-the-terminal-with-fzf
 fzf_then_open_in_the_editor() {
-    local file=$(eval fd . --color=never | fzf-tmux --height 40% --exit-0)
+    local file=$(eval fd . --color=always | fzf-tmux --height 40% --exit-0)
     # open the file if exists
     if [ -f "$file" ]; then
         # Use the default editor if it is defined

@@ -5,7 +5,7 @@
 ## fonts
 ``` zsh
 # ref https://github.com/powerline/fonts.git
-cd dotfile
+cd dotfile/fonts
 ./install.sh
 # After installation complete, go the preference to set the font
 # In my example, I use the Meslo LG M on PowerShell
@@ -39,7 +39,7 @@ source ~/.zshrc
 # https://www.zhihu.com/question/49284484
 vim ~/.zshrc
 # Fill the plugin you want, ... represent other Zsh plugins you may have installed.
-plugin=(... git extract gitignore)
+plugin=(... git extract gitignore zsh_reload cp z command-not-found sudo)
 ```
 
 ## Oh My Zsh (third-party plugin)
@@ -55,7 +55,22 @@ vim ~/.zshrc
 plugin=(... zsh-autosuggestions zsh-syntax-highlighting)
 ```
 
-## tmux & fzf & custom options
+## Prepare .fdignore if you don't want to ignore when searching
+```zsh
+gi python > ~/.fdignore
+```
+
+
+## tmux & fzf & custom options (One-shot)
+
+### Use the one shot version, suppose the oh my zsh is installed
+```zsh
+cd dotfile
+./install.sh
+```
+
+## tmux & fzf & custom options (Manual)
+
 ### Prepare the dot file in the home directory
 ```zsh
 # Tmux version >=  2.1 
@@ -68,16 +83,6 @@ ln -s -f $PWD/custom.zsh ~/.custom.zsh
 ### Add this to ~/.zshrc
 ```zsh
 source ~/.custom.zsh
-```
-### Prepare .fdignore if you don't want to ignore when searching
-```zsh
-gi python > ~/.fdignore
-```
-### FZF bindings
-```zsh
-# Add them in ~/.custom.zsh
-export FZF_DEFAULT_COMMAND="fd --type file --color=always"
-export FZF_DEFAULT_OPTS="--ansi"
 ```
 
 ### Vim settings
