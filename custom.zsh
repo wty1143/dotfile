@@ -17,3 +17,10 @@ export PATH=/opt/homebrew/bin/:$PATH
 
 zle     -N   fzf_then_open_in_the_editor
 bindkey '^P' fzf_then_open_in_the_editor
+
+# FZF bindings
+export FZF_DEFAULT_COMMAND="fd --type file --color=always"
+export FZF_DEFAULT_OPTS="--ansi"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+alias ctags="`brew --prefix`/bin/ctags"

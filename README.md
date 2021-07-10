@@ -56,6 +56,7 @@ plugin=(... zsh-autosuggestions zsh-syntax-highlighting)
 ```
 
 ## tmux & fzf & custom options
+### Prepare the dot file in the home directory
 ```zsh
 # Tmux version >=  2.1 
 cd dotfile
@@ -63,6 +64,33 @@ cd dotfile
 ln -s -f $PWD/tmux.conf ~/.tmux.conf
 # Add some custom function ex: Ctrl+P
 ln -s -f $PWD/custom.zsh ~/.custom.zsh
-# Add this to ~/.zshrc
+```
+### Add this to ~/.zshrc
+```zsh
 source ~/.custom.zsh
+```
+### Prepare .fdignore if you don't want to ignore when searching
+```zsh
+gi python > ~/.fdignore
+```
+### FZF bindings
+```zsh
+# Add them in ~/.custom.zsh
+export FZF_DEFAULT_COMMAND="fd --type file --color=always"
+export FZF_DEFAULT_OPTS="--ansi"
+```
+
+### Vim settings
+```zsh
+cd dotfile
+
+ln -s -f $PWD/vimrc ~/.vimrc
+
+ln -s -f $PWD/vim ~/.vim
+
+# ref: https://galea.medium.com/getting-started-with-ctags-vim-on-macos-87bcb07cf6d
+# Usually the mac's default ctags is too old, use homebrew to update
+brew install ctags
+# Add them to ~/.custom.zsh
+alias ctags="`brew --prefix`/bin/ctags"
 ```
