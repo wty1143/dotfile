@@ -1,6 +1,12 @@
 # **dotfile**
 
 # Installation (Suppose using MacOS)
+```
+git clone https://github.com/wty1143/dotfile.git
+```
+```
+git submodule update --init --recursive
+```
 ---
 ## zsh shell
 ![image info](./pic/zsh.png)
