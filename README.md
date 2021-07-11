@@ -48,7 +48,7 @@ source ~/.zshrc
 ```zsh
 # https://www.zhihu.com/question/49284484
 vim ~/.zshrc
-# Fill the plugin you want, ... represent other Zsh plugins you may have installed.
+# Fill the plugin you want, ... represent other Zsh plugins you may have installed.
 plugin=(... git extract gitignore zsh_reload cp z command-not-found sudo)
 ```
 
