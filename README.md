@@ -2,6 +2,10 @@
 
 # Installation (Suppose using MacOS)
 ---
+## zsh shell
+![image info](./pic/zsh.png)
+## zsh + fzf
+![image info](./pic/zsh_fzf.png)
 ## fonts
 ``` zsh
 # ref https://github.com/powerline/fonts.git
@@ -60,6 +64,10 @@ plugin=(... zsh-autosuggestions zsh-syntax-highlighting)
 gi python > ~/.fdignore
 ```
 
+## vim welcome message
+![image info](./pic/vim.png)
+## vim + fzf
+![image info](./pic/vim_fzf.png)
 
 ## tmux & fzf & custom options (One-shot)
 
