@@ -6,6 +6,7 @@ brew install fd
 brew install fzf
 brew install tmux
 brew install ripgrep
+brew install python
 
 declare -a arr=(vim
                 vimrc

@@ -113,3 +113,6 @@ brew install ctags
 # Add them to ~/.custom.zsh
 alias ctags="`brew --prefix`/bin/ctags"
 ```
+
+## If you see weird characters, try to enable glyphs
+Preferences > Profiles > Text > User built-in Powerline glyphs
