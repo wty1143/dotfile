@@ -4,6 +4,8 @@
 brew install ctags
 brew install fd
 brew install fzf
+brew install tmux
+brew install ripgrep
 
 declare -a arr=(vim
                 vimrc
